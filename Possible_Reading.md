@@ -1,6 +1,9 @@
+# Future Reading
+
 ## Monitoring Tools
 
-* (skimmed) http://www.brendangregg.com/blog/2015-07-08/choosing-a-linux-tracer.html
+### Unread
+
 * Wireshark https://www.wireshark.org/
 * System Tap https://sourceware.org/systemtap/wiki
 * https://github.com/iovisor/bcc
@@ -12,7 +15,6 @@
 * http://fractio.nl/2014/05/10/rethinking-monitoring/
 * http://fractio.nl/2014/02/12/data-driven-alerting-with-flapjack-puppet-hiera/
 * http://en.wikipedia.org/wiki/Consilience
-* https://news.ycombinator.com/item?id=8450147 (looks of good opinions here!)
 * http://misfra.me/state-of-the-state-part-iii
 * https://qmonnet.github.io/whirl-offload/2016/09/01/dive-into-bpf/
 * https://github.com/google/cadvisor
@@ -21,6 +23,11 @@
 * OpenTracing - see zipkin and dapper (there are papers on these)
 * http://www.brendangregg.com/blog/2015-09-22/bcc-linux-4.3-tracing.html
 * https://github.com/google/stenographer - this looks really useful for capturing lots of packets
+
+### Read Later
+
+* http://www.brendangregg.com/blog/2015-07-08/choosing-a-linux-tracer.html
+* https://news.ycombinator.com/item?id=8450147 (looks of good opinions here!)
 
 ## Monitoring Theory
 
@@ -49,10 +56,12 @@
 ## Roger's Notes
 
 * Monitoring
-* Availability
+* Availability - currently reading
 * Utility Rate
 
 ## Price based scheduling
+
+Appears to be slides for a talk, and are hard to read on their own.
 
 ## Other
 
