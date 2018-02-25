@@ -56,7 +56,7 @@
 ## Roger's Notes
 
 * Monitoring
-* Availability - currently reading
+* Availability (mostly read)
 * Utility Rate
 
 ## Price based scheduling
