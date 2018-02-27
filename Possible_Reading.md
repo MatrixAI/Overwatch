@@ -78,3 +78,4 @@ Appears to be slides for a talk, and are hard to read on their own.
     * Reference 69: Hailong Yang, Alex Breslow, Jason Mars, and Lingjia Tang. Bubble-flux: precise online qos management for increased utilization in warehouse scale computers. In Proc. of the 40th Annual International Symposium on Computer Architecture (ISCA). Tel-Aviv, Israel, 2013
 * http://www.perfdynamics.com/Manifesto/USLscalability.html
 * https://scholar.google.com.au/scholar?as_ylo=2017&q=IC-scheduling+theory&hl=en&as_sdt=0,5
+* Worlds of Events references
