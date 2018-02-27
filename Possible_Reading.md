@@ -67,7 +67,10 @@ Appears to be slides for a talk, and are hard to read on their own.
 
 * https://landing.google.com/sre/book/index.html
 * https://people.eecs.berkeley.edu/~alig/papers/drf.pdf
-* http://www.industry-academia.org/download/2014-asplos-quasar-Stanford-paper.pdf
+* (read) http://www.industry-academia.org/download/2014-asplos-quasar-Stanford-paper.pdf
     * papers that cite it: https://scholar.google.com.au/scholar?gws_rd=cr&dcr=0&um=1&ie=UTF-8&lr&cites=9277981620153489554
     * author http://www.csl.cornell.edu/~delimitrou/
     * Roger's notes
+    * [Reference 20: Paragon](http://csl.stanford.edu/~christos/publications/2013.paragon.asplos.pdf)
+* http://www.perfdynamics.com/Manifesto/USLscalability.html
+* https://scholar.google.com.au/scholar?as_ylo=2017&q=IC-scheduling+theory&hl=en&as_sdt=0,5
