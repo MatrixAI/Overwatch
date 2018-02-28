@@ -66,16 +66,16 @@ Appears to be slides for a talk, and are hard to read on their own.
 ## Other
 
 * https://landing.google.com/sre/book/index.html
-* https://people.eecs.berkeley.edu/~alig/papers/drf.pdf
+* [Dominant Resource Fairness](https://people.eecs.berkeley.edu/~alig/papers/drf.pdf)
 * (read) [Quasar](http://www.industry-academia.org/download/2014-asplos-quasar-Stanford-paper.pdf)
     * [papers that cite it](https://scholar.google.com.au/scholar?gws_rd=cr&dcr=0&um=1&ie=UTF-8&lr&cites=9277981620153489554)
     * [author](http://www.csl.cornell.edu/~delimitrou/)
     * Roger's notes
     * (started reading) [Reference 20: Paragon](http://csl.stanford.edu/~christos/publications/2013.paragon.asplos.pdf)
     * (read) [Reference 18: QoS-Aware Admission Control](https://www.usenix.org/system/files/conference/icac13/icac13_delimitrou.pdf)
-        * Reference 27: M. Schwarzkopf, A. Konwinski, M. Abd-El-Malek, J. Wilkes. “Omega: flexible, scalable schedulers for large compute clusters”. In Proc. of the European Conference on Systems (EuroSys’13), Prague, Czech Republic, April 2013
-    * [Reference 45: Q-Clouds](https://www.microsoft.com/en-us/research/wp-content/uploads/2010/04/QClouds.pdf)
-    * Reference 69: Hailong Yang, Alex Breslow, Jason Mars, and Lingjia Tang. Bubble-flux: precise online qos management for increased utilization in warehouse scale computers. In Proc. of the 40th Annual International Symposium on Computer Architecture (ISCA). Tel-Aviv, Israel, 2013
+        * [Reference 27: Omega](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41684.pdf)
+    * (read) [Reference 45: Q-Clouds](https://www.microsoft.com/en-us/research/wp-content/uploads/2010/04/QClouds.pdf)
+    * (read) [Reference 69: Bubble-flux](http://clarity-lab.org/wp-content/papercite-data/pdf/yang13isca.pdf)
 * http://www.perfdynamics.com/Manifesto/USLscalability.html
 * https://scholar.google.com.au/scholar?as_ylo=2017&q=IC-scheduling+theory&hl=en&as_sdt=0,5
 * Worlds of Events references
