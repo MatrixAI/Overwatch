@@ -79,3 +79,5 @@ Appears to be slides for a talk, and are hard to read on their own.
 * http://www.perfdynamics.com/Manifesto/USLscalability.html
 * https://scholar.google.com.au/scholar?as_ylo=2017&q=IC-scheduling+theory&hl=en&as_sdt=0,5
 * Worlds of Events references
+    * [Reference 4: Causality, Knowledge and Coordination](https://arxiv.org/pdf/1112.4428.pdf)
+* https://en.wikipedia.org/wiki/Flight_envelope
