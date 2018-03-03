@@ -10,6 +10,7 @@
 * riemann http://riemann.io/
 * http://serverfault.com/questions/523351/how-do-statsd-and-collectd-relate
 * http://en.wikipedia.org/wiki/Profiling_%28computer_programming%29
+    * Reference 8
 * http://jasonwilder.com/blog/2012/01/03/centralized-logging/
 * http://jasonwilder.com/blog/2013/07/16/centralized-logging-architecture/
 * http://fractio.nl/2014/05/10/rethinking-monitoring/
