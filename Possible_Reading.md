@@ -54,6 +54,16 @@
 * http://www.nt.ntnu.no/users/skoge/prost/proceedings/adchem09/cd/abstract/78.pdf
 * http://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=1013&context=csse_fac
 
+## Language Semantics
+
+* https://en.wikipedia.org/wiki/Constraint_logic_programming
+* https://en.wikipedia.org/wiki/Linear_temporal_logic (google "linear temporal logic functional reactive programming")
+* https://dtai.cs.kuleuven.be/problog/ (I like the idea of overloading operators to work against variables representing distributions)
+* Combinatory logic https://en.wikipedia.org/wiki/Combinatory_logic
+* Graphical linear algebra
+* Process algebra (and statecharts and bigraphs...)
+* Polymorphism (parametric, and other kinds) - I want to see some usage of polymorphism as the foundation of load-balancing and being able to switch out impls (where in this case impls are real automatons running live).
+
 ## Roger's Notes
 
 * Monitoring
@@ -82,3 +92,7 @@ Appears to be slides for a talk, and are hard to read on their own.
 * Worlds of Events references
     * [Reference 4: Causality, Knowledge and Coordination](https://arxiv.org/pdf/1112.4428.pdf)
 * https://en.wikipedia.org/wiki/Flight_envelope
+
+* SBDO / Dynamic Constraint Optimisation
+    * https://www.dropbox.com/s/1rcey7s3rho13or/59250641.pdf?dl=0
+    * https://www.dropbox.com/s/umuyepakpdb111g/article.pdf?dl=0
