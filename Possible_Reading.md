@@ -57,7 +57,10 @@
 ## Language Semantics
 
 * https://en.wikipedia.org/wiki/Constraint_logic_programming
-* https://en.wikipedia.org/wiki/Linear_temporal_logic (google "linear temporal logic functional reactive programming")
+* (read) https://en.wikipedia.org/wiki/Linear_temporal_logic
+    * google "linear temporal logic functional reactive programming"
+    * https://www.seas.harvard.edu/sites/default/files/files/archived/Czaplicki.pdf
+    * https://dl.acm.org/citation.cfm?doid=3828.3837
 * https://dtai.cs.kuleuven.be/problog/ (I like the idea of overloading operators to work against variables representing distributions)
 * Combinatory logic https://en.wikipedia.org/wiki/Combinatory_logic
 * Graphical linear algebra
@@ -95,5 +98,5 @@ Appears to be slides for a talk, and are hard to read on their own.
 * SBDO / Dynamic Constraint Optimisation
     * (read) [Summary](https://www.dropbox.com/s/1rcey7s3rho13or/59250641.pdf?dl=0)
     * (read) [Draft](https://www.dropbox.com/s/umuyepakpdb111g/article.pdf?dl=0)
-    * http://ro.uow.edu.au/cgi/viewcontent.cgi?article=1147&context=infopapers
+    * (read) [SBSD](http://ro.uow.edu.au/cgi/viewcontent.cgi?article=1147&context=infopapers)
 * http://www.prismmodelchecker.org/
