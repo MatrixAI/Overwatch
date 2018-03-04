@@ -92,7 +92,8 @@ Appears to be slides for a talk, and are hard to read on their own.
 * Worlds of Events references
     * [Reference 4: Causality, Knowledge and Coordination](https://arxiv.org/pdf/1112.4428.pdf)
 * https://en.wikipedia.org/wiki/Flight_envelope
-
 * SBDO / Dynamic Constraint Optimisation
-    * https://www.dropbox.com/s/1rcey7s3rho13or/59250641.pdf?dl=0
-    * https://www.dropbox.com/s/umuyepakpdb111g/article.pdf?dl=0
+    * (read) [Summary](https://www.dropbox.com/s/1rcey7s3rho13or/59250641.pdf?dl=0)
+    * (read) [Draft](https://www.dropbox.com/s/umuyepakpdb111g/article.pdf?dl=0)
+    * http://ro.uow.edu.au/cgi/viewcontent.cgi?article=1147&context=infopapers
+* http://www.prismmodelchecker.org/
