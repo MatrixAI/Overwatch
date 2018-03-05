@@ -61,6 +61,9 @@
     * google "linear temporal logic functional reactive programming"
     * https://www.seas.harvard.edu/sites/default/files/files/archived/Czaplicki.pdf
     * https://dl.acm.org/citation.cfm?doid=3828.3837
+* [LTL FRP talk](https://www.slideshare.net/SergeiWinitzki/temporal-logic-and-functional-reactive-programming) references
+    * [Krishnaswamy's paper](https://people.mpi-sws.org/~neelk/simple-frp.pdf)
+        * References 5,17,39,27
 * https://dtai.cs.kuleuven.be/problog/ (I like the idea of overloading operators to work against variables representing distributions)
 * Combinatory logic https://en.wikipedia.org/wiki/Combinatory_logic
 * Graphical linear algebra
