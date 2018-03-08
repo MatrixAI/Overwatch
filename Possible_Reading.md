@@ -59,7 +59,8 @@
 * https://en.wikipedia.org/wiki/Constraint_logic_programming
 * (read) https://en.wikipedia.org/wiki/Linear_temporal_logic
     * google "linear temporal logic functional reactive programming"
-    * https://www.seas.harvard.edu/sites/default/files/files/archived/Czaplicki.pdf
+    * (read) [Elm Paper](https://www.seas.harvard.edu/sites/default/files/files/archived/Czaplicki.pdf)
+        * (skimmed) [Reference 28: Arrowised FRP](http://haskell.cs.yale.edu/wp-content/uploads/2011/02/workshop-02.pdf)
     * https://dl.acm.org/citation.cfm?doid=3828.3837
 * [LTL FRP talk](https://www.slideshare.net/SergeiWinitzki/temporal-logic-and-functional-reactive-programming) references
     * [Krishnaswamy's paper](https://people.mpi-sws.org/~neelk/simple-frp.pdf)
