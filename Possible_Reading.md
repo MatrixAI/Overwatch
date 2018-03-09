@@ -10,7 +10,6 @@
 * riemann http://riemann.io/
 * http://serverfault.com/questions/523351/how-do-statsd-and-collectd-relate
 * http://en.wikipedia.org/wiki/Profiling_%28computer_programming%29
-    * Reference 8
 * http://jasonwilder.com/blog/2012/01/03/centralized-logging/
 * http://jasonwilder.com/blog/2013/07/16/centralized-logging-architecture/
 * http://fractio.nl/2014/05/10/rethinking-monitoring/
@@ -63,19 +62,18 @@
         * (skimmed) [Reference 28: Arrowised FRP](http://haskell.cs.yale.edu/wp-content/uploads/2011/02/workshop-02.pdf)
     * https://dl.acm.org/citation.cfm?doid=3828.3837
 * [LTL FRP talk](https://www.slideshare.net/SergeiWinitzki/temporal-logic-and-functional-reactive-programming) references
-    * [Krishnaswamy's paper](https://people.mpi-sws.org/~neelk/simple-frp.pdf)
-        * References 5,17,39,27
+    * (mostly read) [Krishnaswamy's paper](https://people.mpi-sws.org/~neelk/simple-frp.pdf)
+        * References 5,7,39,27 (hard to find)
 * https://dtai.cs.kuleuven.be/problog/ (I like the idea of overloading operators to work against variables representing distributions)
 * Combinatory logic https://en.wikipedia.org/wiki/Combinatory_logic
 * Graphical linear algebra
 * Process algebra (and statecharts and bigraphs...)
-* Polymorphism (parametric, and other kinds) - I want to see some usage of polymorphism as the foundation of load-balancing and being able to switch out impls (where in this case impls are real automatons running live).
 
 ## Roger's Notes
 
 * Monitoring
 * Availability (mostly read)
-* Utility Rate
+* Utility Rate (mostly read)
 
 ## Price based scheduling
 
@@ -99,8 +97,4 @@ Appears to be slides for a talk, and are hard to read on their own.
 * Worlds of Events references
     * [Reference 4: Causality, Knowledge and Coordination](https://arxiv.org/pdf/1112.4428.pdf)
 * https://en.wikipedia.org/wiki/Flight_envelope
-* SBDO / Dynamic Constraint Optimisation
-    * (read) [Summary](https://www.dropbox.com/s/1rcey7s3rho13or/59250641.pdf?dl=0)
-    * (read) [Draft](https://www.dropbox.com/s/umuyepakpdb111g/article.pdf?dl=0)
-    * (read) [SBSD](http://ro.uow.edu.au/cgi/viewcontent.cgi?article=1147&context=infopapers)
 * http://www.prismmodelchecker.org/
