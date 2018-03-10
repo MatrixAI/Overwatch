@@ -4,9 +4,7 @@
 
 ### Unread
 
-* Wireshark https://www.wireshark.org/
 * System Tap https://sourceware.org/systemtap/wiki
-* https://github.com/iovisor/bcc
 * riemann http://riemann.io/
 * http://serverfault.com/questions/523351/how-do-statsd-and-collectd-relate
 * http://en.wikipedia.org/wiki/Profiling_%28computer_programming%29
