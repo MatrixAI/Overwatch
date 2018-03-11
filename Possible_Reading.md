@@ -63,6 +63,8 @@
     * (mostly read) [Krishnaswamy's paper](https://people.mpi-sws.org/~neelk/simple-frp.pdf)
         * References 5,7,39,27 (hard to find)
 * https://dtai.cs.kuleuven.be/problog/ (I like the idea of overloading operators to work against variables representing distributions)
+    * https://lirias.kuleuven.be/bitstream/123456789/392821/3/plp2cnf.pdf
+    * (read) https://lirias.kuleuven.be/bitstream/123456789/146072/1/ijca
 * Combinatory logic https://en.wikipedia.org/wiki/Combinatory_logic
 * Graphical linear algebra
 * Process algebra (and statecharts and bigraphs...)
