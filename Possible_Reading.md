@@ -63,11 +63,13 @@
     * (mostly read) [Krishnaswamy's paper](https://people.mpi-sws.org/~neelk/simple-frp.pdf)
         * References 5,7,39,27 (hard to find)
 * https://dtai.cs.kuleuven.be/problog/ (I like the idea of overloading operators to work against variables representing distributions)
-    * https://lirias.kuleuven.be/bitstream/123456789/392821/3/plp2cnf.pdf
+    * (started) https://lirias.kuleuven.be/bitstream/123456789/392821/3/plp2cnf.pdf
+        * Other PLP languages, including ICL, PRISM, and LPAD/CP-logic.
     * (read) https://lirias.kuleuven.be/bitstream/123456789/146072/1/ijca
 * Combinatory logic https://en.wikipedia.org/wiki/Combinatory_logic
 * Graphical linear algebra
 * Process algebra (and statecharts and bigraphs...)
+* https://github.com/hakaru-dev/hakaru
 
 ## Roger's Notes
 
@@ -98,3 +100,5 @@ Appears to be slides for a talk, and are hard to read on their own.
     * [Reference 4: Causality, Knowledge and Coordination](https://arxiv.org/pdf/1112.4428.pdf)
 * https://en.wikipedia.org/wiki/Flight_envelope
 * http://www.prismmodelchecker.org/
+    * (skimmed) [PRISM Paper (2008a)](https://link.springer.com/chapter/10.1007/978-3-540-78652-8_5)
+    * (skimmed) [PRISM Paper (2008b)](https://link.springer.com/article/10.1007%2Fs10844-008-0062-7)
