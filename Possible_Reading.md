@@ -4,28 +4,24 @@
 
 ### Unread
 
-* System Tap https://sourceware.org/systemtap/wiki
-* riemann http://riemann.io/
-* http://serverfault.com/questions/523351/how-do-statsd-and-collectd-relate
-* http://en.wikipedia.org/wiki/Profiling_%28computer_programming%29
-* http://jasonwilder.com/blog/2012/01/03/centralized-logging/
-* http://jasonwilder.com/blog/2013/07/16/centralized-logging-architecture/
+
 * http://fractio.nl/2014/05/10/rethinking-monitoring/
-* http://fractio.nl/2014/02/12/data-driven-alerting-with-flapjack-puppet-hiera/
-* http://en.wikipedia.org/wiki/Consilience
 * http://misfra.me/state-of-the-state-part-iii
-* https://qmonnet.github.io/whirl-offload/2016/09/01/dive-into-bpf/
 * https://github.com/google/cadvisor
 * Check out grafana as well
 * https://blog.yadutaf.fr/2017/07/28/tracing-a-packet-journey-using-linux-tracepoints-perf-ebpf/
 * OpenTracing - see zipkin and dapper (there are papers on these)
-* http://www.brendangregg.com/blog/2015-09-22/bcc-linux-4.3-tracing.html
-* https://github.com/google/stenographer - this looks really useful for capturing lots of packets
 
 ### Read Later
 
+* http://fractio.nl/2014/02/12/data-driven-alerting-with-flapjack-puppet-hiera/
+* http://jasonwilder.com/blog/2012/01/03/centralized-logging/
+* http://jasonwilder.com/blog/2013/07/16/centralized-logging-architecture/
+* http://en.wikipedia.org/wiki/Profiling_%28computer_programming%29
 * http://www.brendangregg.com/blog/2015-07-08/choosing-a-linux-tracer.html
-* https://news.ycombinator.com/item?id=8450147 (looks of good opinions here!)
+* https://news.ycombinator.com/item?id=8450147 (looks of good opinions here!) (about alerts, not monitoring)
+* https://qmonnet.github.io/whirl-offload/2016/09/01/dive-into-bpf/
+* https://github.com/google/stenographer - this looks really useful for capturing lots of packets
 
 ## Monitoring Theory
 
@@ -83,8 +79,8 @@ Appears to be slides for a talk, and are hard to read on their own.
 
 ## Other
 
-* https://landing.google.com/sre/book/index.html
-* [Dominant Resource Fairness](https://people.eecs.berkeley.edu/~alig/papers/drf.pdf)
+* (started) https://landing.google.com/sre/book/index.html
+* (started) [Dominant Resource Fairness](https://people.eecs.berkeley.edu/~alig/papers/drf.pdf)
 * (read) [Quasar](http://www.industry-academia.org/download/2014-asplos-quasar-Stanford-paper.pdf)
     * [papers that cite it](https://scholar.google.com.au/scholar?gws_rd=cr&dcr=0&um=1&ie=UTF-8&lr&cites=9277981620153489554)
     * [author](http://www.csl.cornell.edu/~delimitrou/)
@@ -102,3 +98,5 @@ Appears to be slides for a talk, and are hard to read on their own.
 * http://www.prismmodelchecker.org/
     * (skimmed) [PRISM Paper (2008a)](https://link.springer.com/chapter/10.1007/978-3-540-78652-8_5)
     * (skimmed) [PRISM Paper (2008b)](https://link.springer.com/article/10.1007%2Fs10844-008-0062-7)
+* rrdtool db
+* sysdig
