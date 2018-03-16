@@ -11,9 +11,11 @@
 * Check out grafana as well
 * https://blog.yadutaf.fr/2017/07/28/tracing-a-packet-journey-using-linux-tracepoints-perf-ebpf/
 * OpenTracing - see zipkin and dapper (there are papers on these)
+* https://github.com/weaveworks/scope
 
 ### Read Later
 
+* https://news.ycombinator.com/item?id=16592303
 * http://fractio.nl/2014/02/12/data-driven-alerting-with-flapjack-puppet-hiera/
 * http://jasonwilder.com/blog/2012/01/03/centralized-logging/
 * http://jasonwilder.com/blog/2013/07/16/centralized-logging-architecture/
@@ -100,3 +102,4 @@ Appears to be slides for a talk, and are hard to read on their own.
     * (skimmed) [PRISM Paper (2008b)](https://link.springer.com/article/10.1007%2Fs10844-008-0062-7)
 * rrdtool db
 * sysdig
+* apache storm microbatching
