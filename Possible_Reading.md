@@ -7,11 +7,6 @@
 
 * http://fractio.nl/2014/05/10/rethinking-monitoring/
 * http://misfra.me/state-of-the-state-part-iii
-* https://github.com/google/cadvisor
-* Check out grafana as well
-* https://blog.yadutaf.fr/2017/07/28/tracing-a-packet-journey-using-linux-tracepoints-perf-ebpf/
-* OpenTracing - see zipkin and dapper (there are papers on these)
-* https://github.com/weaveworks/scope
 
 ### Read Later
 
