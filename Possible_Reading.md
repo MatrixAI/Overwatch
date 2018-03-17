@@ -4,12 +4,9 @@
 
 ### Unread
 
-
-* http://fractio.nl/2014/05/10/rethinking-monitoring/
-* http://misfra.me/state-of-the-state-part-iii
-
 ### Read Later
 
+* http://misfra.me/state-of-the-state-part-iii
 * https://news.ycombinator.com/item?id=16592303
 * http://fractio.nl/2014/02/12/data-driven-alerting-with-flapjack-puppet-hiera/
 * http://jasonwilder.com/blog/2012/01/03/centralized-logging/
@@ -30,7 +27,6 @@
 * http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=5984319&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D5984319
 * http://arxiv.org/ftp/arxiv/papers/1204/1204.0179.pdf
 * http://en.wikipedia.org/wiki/Distributed_control_system
-* http://en.wikipedia.org/wiki/Network_traffic_measurement
 * http://en.wikipedia.org/wiki/Teletraffic_engineering
 * Bernoulli Sampling
 * https://github.com/umbrant/QuantileEstimation
