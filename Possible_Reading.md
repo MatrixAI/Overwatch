@@ -33,6 +33,8 @@
 * http://marios.io/2010/03/02/stream-algorithms-order-statistics/
 * http://nuit-blanche.blogspot.com.au/2014/01/frugal-streaming-and-sparse-recovery.html?m=1
 * https://en.wikipedia.org/wiki/Unevenly_spaced_time_series
+* OpenTracing specification
+
 
 ### Read Later
 
@@ -42,6 +44,7 @@
 
 ## Language Semantics
 
+* https://github.com/pfq/PFQ
 * https://en.wikipedia.org/wiki/Constraint_logic_programming
 * (read) https://en.wikipedia.org/wiki/Linear_temporal_logic
     * google "linear temporal logic functional reactive programming"
@@ -60,15 +63,9 @@
 * Process algebra (and statecharts and bigraphs...)
 * https://github.com/hakaru-dev/hakaru
 
-## Roger's Notes
+## Databases
 
-* Monitoring
-* Availability (mostly read)
-* Utility Rate (mostly read)
-
-## Price based scheduling
-
-Appears to be slides for a talk, and are hard to read on their own.
+* [InfluxDB](https://github.com/influxdata/influxdb)
 
 ## Other
 
@@ -91,6 +88,4 @@ Appears to be slides for a talk, and are hard to read on their own.
 * http://www.prismmodelchecker.org/
     * (skimmed) [PRISM Paper (2008a)](https://link.springer.com/chapter/10.1007/978-3-540-78652-8_5)
     * (skimmed) [PRISM Paper (2008b)](https://link.springer.com/article/10.1007%2Fs10844-008-0062-7)
-* rrdtool db
-* sysdig
 * apache storm microbatching
