@@ -21,7 +21,6 @@
 
 ### Unread
 
-* http://sam-koblenski.blogspot.com.au/2015/08/everyday-dsp-for-programmers-basic.html
 * http://www.diku.dk/OLD/undervisning/2005v/347/p121-joyce.pdf
 * http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1703189&url=http%3A%2F%2Fieeexplore.ieee.org%2Fiel5%2F11167%2F35938%2F01703189.pdf%3Farnumber%3D1703189
 * http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=5984319&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D5984319
@@ -33,11 +32,10 @@
 * http://marios.io/2010/03/02/stream-algorithms-order-statistics/
 * http://nuit-blanche.blogspot.com.au/2014/01/frugal-streaming-and-sparse-recovery.html?m=1
 * https://en.wikipedia.org/wiki/Unevenly_spaced_time_series
-* OpenTracing specification
-
 
 ### Read Later
 
+* OpenTracing specification
 * http://www.lsv.ens-cachan.fr/Publis/PAPERS/PDF/AMB-icde08.pdf
 * http://www.nt.ntnu.no/users/skoge/prost/proceedings/adchem09/cd/abstract/78.pdf
 * http://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=1013&context=csse_fac
