@@ -29,6 +29,8 @@
 * http://en.wikipedia.org/wiki/Teletraffic_engineering
 * Bernoulli Sampling
 * https://github.com/umbrant/QuantileEstimation
+    * (skimmed) [Cormode, Korn, Muthukrishnan, and Srivastava "Effective Computation of Biased Quantiles over Data Streams" in ICDE 2005](https://www.cs.rutgers.edu/~muthu/bquant.pdf)
+    * [Greenwald and Khanna, "Space-efficient online computation of quantile summaries" in SIGMOD 2001](http://www.cs.dartmouth.edu/~ac/Teach/CS49-Fall11/Papers/greenwald-quantiles.pdf)
 * http://marios.io/2010/03/02/stream-algorithms-order-statistics/
 * http://nuit-blanche.blogspot.com.au/2014/01/frugal-streaming-and-sparse-recovery.html?m=1
 * https://en.wikipedia.org/wiki/Unevenly_spaced_time_series
@@ -61,10 +63,6 @@
 * Process algebra (and statecharts and bigraphs...)
 * https://github.com/hakaru-dev/hakaru
 
-## Databases
-
-* [InfluxDB](https://github.com/influxdata/influxdb)
-
 ## Other
 
 * (started) https://landing.google.com/sre/book/index.html
@@ -86,4 +84,4 @@
 * http://www.prismmodelchecker.org/
     * (skimmed) [PRISM Paper (2008a)](https://link.springer.com/chapter/10.1007/978-3-540-78652-8_5)
     * (skimmed) [PRISM Paper (2008b)](https://link.springer.com/article/10.1007%2Fs10844-008-0062-7)
-* apache storm microbatching
+* https://github.com/aws/aws-cli/blob/develop/awscli/topics/s3-config.rst
