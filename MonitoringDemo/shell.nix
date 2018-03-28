@@ -1,3 +1,4 @@
+# Run as root otherwise BPF fails
 { pkgs ? import <nixpkgs> {} }:
   with pkgs;
   python27Packages.buildPythonApplication {

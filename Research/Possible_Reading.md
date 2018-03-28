@@ -85,3 +85,5 @@
     * (skimmed) [PRISM Paper (2008a)](https://link.springer.com/chapter/10.1007/978-3-540-78652-8_5)
     * (skimmed) [PRISM Paper (2008b)](https://link.springer.com/article/10.1007%2Fs10844-008-0062-7)
 * https://github.com/aws/aws-cli/blob/develop/awscli/topics/s3-config.rst
+* ring buffer disruptor pattern
+* tsung
