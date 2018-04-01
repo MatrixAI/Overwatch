@@ -407,8 +407,8 @@ class Data_ipv6(ct.Structure):
 # need to add columns, columns that solve real actual problems, I'd start by
 # adding an extended mode (-x) to included those columns.
 #
-header_string = "%-5s %-10.10s %s%-15s %-5s %-15s %-5s %5s %5s %s"
-format_string = "%-5d %-10.10s %s%-15s %-5d %-15s %-5d %5d %5d %.2f"
+# header_string = "%-5s %-10.10s %s%-15s %-5s %-15s %-5s %5s %5s %s"
+# format_string = "%-5d %-10.10s %s%-15s %-5d %-15s %-5d %5d %5d %.2f"
 # if args.wide:
 #     header_string = "%-5s %-16.16s %-2s %-26s %-5s %-26s %-5s %6s %6s %s"
 #     format_string = "%-5d %-16.16s %-2s %-26s %-5s %-26s %-5d %6d %6d %.2f"
@@ -433,13 +433,13 @@ def print_ipv4_event(cpu, data, size):
     #         print("%.6f," % delta_s, end="")
     #     else:
     #         print("%-9.6f " % delta_s, end="")
-    print(format_string % (event.pid, event.task.decode(),
+    # print(format_string % (event.pid, event.task.decode(),
         # "4" if args.wide or args.csv else "",
-        "",
-        inet_ntop(AF_INET, pack("I", event.saddr)), event.ports >> 32,
-        inet_ntop(AF_INET, pack("I", event.daddr)), event.ports & 0xffffffff,
-        event.tx_b / 1024, event.rx_b / 1024, float(event.span_us) / 1000))
-    whisper.update("Latency", float(event.span_us) / 1000)
+        # "",
+        # inet_ntop(AF_INET, pack("I", event.saddr)), event.ports >> 32,
+        # inet_ntop(AF_INET, pack("I", event.daddr)), event.ports & 0xffffffff,
+        # event.tx_b / 1024, event.rx_b / 1024, float(event.span_us) / 1000))
+    whisper.update("DB/Latency", float(event.span_us) / 1000)
 
 def print_ipv6_event(cpu, data, size):
     event = ct.cast(data, ct.POINTER(Data_ipv6)).contents
@@ -457,13 +457,13 @@ def print_ipv6_event(cpu, data, size):
     #         print("%.6f," % delta_s, end="")
     #     else:
     #         print("%-9.6f " % delta_s, end="")
-    print(format_string % (event.pid, event.task.decode(),
+    # print(format_string % (event.pid, event.task.decode(),
         # "6" if args.wide or args.csv else "",
-        "",
-        inet_ntop(AF_INET6, event.saddr), event.ports >> 32,
-        inet_ntop(AF_INET6, event.daddr), event.ports & 0xffffffff,
-        event.tx_b / 1024, event.rx_b / 1024, float(event.span_us) / 1000))
-    whisper.update("Latency", float(event.span_us) / 1000)
+        # "",
+        # inet_ntop(AF_INET6, event.saddr), event.ports >> 32,
+        # inet_ntop(AF_INET6, event.daddr), event.ports & 0xffffffff,
+        # event.tx_b / 1024, event.rx_b / 1024, float(event.span_us) / 1000))
+    whisper.update("DB/Latency", float(event.span_us) / 1000)
 
 # initialize BPF
 b = BPF(text=bpf_text)
@@ -479,10 +479,12 @@ b = BPF(text=bpf_text)
 #         print("%s," % ("TIME(s)"), end="")
 #     else:
 #         print("%-9s " % ("TIME(s)"), end="")
-print(header_string % ("PID", "COMM",
+# print(header_string % ("PID", "COMM",
     # "IP" if args.wide or args.csv else "", "LADDR",
-    "", "LADDR",
-    "LPORT", "RADDR", "RPORT", "TX_KB", "RX_KB", "MS"))
+    # "", "LADDR",
+    # "LPORT", "RADDR", "RPORT", "TX_KB", "RX_KB", "MS"))
+
+print("Monitoring...")
 
 start_ts = 0
 
