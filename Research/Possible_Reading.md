@@ -62,6 +62,8 @@
 * Graphical linear algebra
 * Process algebra (and statecharts and bigraphs...)
 * https://github.com/hakaru-dev/hakaru
+* Session Types
+* Gradual Session Types
 
 ## Other
 
