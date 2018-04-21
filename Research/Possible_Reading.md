@@ -4,6 +4,8 @@
 
 ### Unread
 
+* https://www.netronome.com/blog/bpf-ebpf-xdp-and-bpfilter-what-are-these-things-and-what-do-they-mean-enterprise/
+
 ### Read Later
 
 * http://misfra.me/state-of-the-state-part-iii
@@ -62,8 +64,6 @@
 * Graphical linear algebra
 * Process algebra (and statecharts and bigraphs...)
 * https://github.com/hakaru-dev/hakaru
-* Session Types
-* Gradual Session Types
 
 ## Other
 
@@ -90,3 +90,4 @@
 * ring buffer disruptor pattern
 * tsung
 * https://www.kernel.org/doc/Documentation/networking/filter.txt
+* https://github.com/iovisor/bcc/blob/master/src/python/bcc/__init__.py line 1136
