@@ -1,6 +1,6 @@
 
-## [Linux Socket Filtering aka BPF](https://www.kernel.org/doc/Documentation/networking/filter.txt)
-
+# [Linux Socket Filtering aka BPF](https://www.kernel.org/doc/Documentation/networking/filter.txt)
+## Old Style - as socket filter
 BPF allows a user-space program to attach a filter onto any socket and allow or disallow certain types of data to come through the socket.
 
 - Linux workflow: create filter code, send to kernel via **SO_ATTACH_FILTER** option, get checked by kernel, begin filtering
@@ -12,6 +12,7 @@ BPF allows a user-space program to attach a filter onto any socket and allow or 
    
 
 ### Structures
+Filters are defined as follows, 
 ```c
 #include <linux/filter.h>
 // each line of filter code is a struct sock_filter
@@ -28,61 +29,8 @@ struct sock_fprog {			/* Required for SO_ATTACH_FILTER. */
 	struct sock_filter __user *filter;
 };
 ```
+and installed as follows
 
-### Example
-```c
-#include <sys/socket.h>
-#include <sys/types.h>
-#include <arpa/inet.h>
-#include <linux/if_ether.h>
-/* ... */
-
-/* From the example above: tcpdump -i em1 port 22 -dd */
-struct sock_filter code[] = {
-	{ 0x28,  0,  0, 0x0000000c },
-	{ 0x15,  0,  8, 0x000086dd },
-	{ 0x30,  0,  0, 0x00000014 },
-	{ 0x15,  2,  0, 0x00000084 },
-	{ 0x15,  1,  0, 0x00000006 },
-	{ 0x15,  0, 17, 0x00000011 },
-	{ 0x28,  0,  0, 0x00000036 },
-	{ 0x15, 14,  0, 0x00000016 },
-	{ 0x28,  0,  0, 0x00000038 },
-	{ 0x15, 12, 13, 0x00000016 },
-	{ 0x15,  0, 12, 0x00000800 },
-	{ 0x30,  0,  0, 0x00000017 },
-	{ 0x15,  2,  0, 0x00000084 },
-	{ 0x15,  1,  0, 0x00000006 },
-	{ 0x15,  0,  8, 0x00000011 },
-	{ 0x28,  0,  0, 0x00000014 },
-	{ 0x45,  6,  0, 0x00001fff },
-	{ 0xb1,  0,  0, 0x0000000e },
-	{ 0x48,  0,  0, 0x0000000e },
-	{ 0x15,  2,  0, 0x00000016 },
-	{ 0x48,  0,  0, 0x00000010 },
-	{ 0x15,  0,  1, 0x00000016 },
-	{ 0x06,  0,  0, 0x0000ffff },
-	{ 0x06,  0,  0, 0x00000000 },
-};
-
-struct sock_fprog bpf = {
-	.len = ARRAY_SIZE(code),
-	.filter = code,
-};
-
-sock = socket(PF_PACKET, SOCK_RAW, htons(ETH_P_ALL));
-if (sock < 0)
-	/* ... bail out ... */
-
-ret = setsockopt(sock, SOL_SOCKET, SO_ATTACH_FILTER, &bpf, sizeof(bpf));
-if (ret < 0)
-	/* ... bail out ... */
-
-/* ... */
-close(sock);
-```
-
-Summary:
 ```c
 setsockopt(sockfd, SOL_SOCKET, SO_ATTACH_FILTER, &val, sizeof(val));
 setsockopt(sockfd, SOL_SOCKET, SO_DETACH_FILTER, &val, sizeof(val));
@@ -159,4 +107,32 @@ struct sock_filter code[] = {
 }
 ```
 
-**\[Follow up\]** Experiment with BPF c code
+**Example C code** for TCP/IPv4 packets filter
+```c
+struct sock_filter code[] = {
+    { BPF_LD | BPF_H | BPF_ABS, 0, 0, 12 },
+    { BPF_JMP | BPF_JEQ, 0, 1, 0x800 },
+    { BPF_LD | BPF_B | BPF_ABS, 0, 0, 23},
+    { BPF_JMP | BPF_JEQ, 0, 1, 6 },
+    { BPF_RET, 0, 0, -1 },
+    { BPF_RET, 0, 0, 0 }
+}
+```
+
+### Experiment with BPF c code
+Tiny demo with BPF blocking UDP data transfer. [gist](https://gist.github.com/n-zhang-hp/cf04e29ec05c07a9586875d814d45736)
+
+#### Observation/Summary
+- BPF accesses link-layer PDU, ethernet frames
+- Checks specific bytes/octets to identify protocols
+    - EtherType at `ldh[12]`
+    - if IPv4, protocol at `ldb[23]`
+
+## New Style - with bpf() syscall
+### Problem
+- `bpf(...)` is in manpages but not present in `<linux/bpf.h>` or `<linux/bpf_common.h>`
+- linker reports `bpf(...)` undefined
+- /dev/bpf device does not exist
+
+### Workaround
+Based on [bcc](https://github.com/iovisor/bcc/blob/master/src/cc/libbpf.c)'s way of calling bpf, `syscall(__NR_bpf, ...)` should be used instead of direct `bpf(...)` calls
