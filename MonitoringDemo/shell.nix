@@ -7,7 +7,7 @@
   let
     python = lib.getAttrFromPath (lib.splitString "." pythonPath) pkgs;
     linux = lib.getAttrFromPath (lib.splitString "." linuxPath) pkgs;
-    drv = import ./default.nix { inherit pkgs pythonPath; };
+    drv = import ./default.nix { inherit pkgs pythonPath linuxPath; };
   in
     drv.overrideAttrs (attrs: {
       src = null;
