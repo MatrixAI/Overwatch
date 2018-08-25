@@ -1,6 +1,6 @@
 {
   pkgs ? import ./pkgs.nix,
-  pythonPath ? "python27"
+  pythonPath ? "python27",
   linuxPath ? "linuxPackages_4_17"
 }:
   with pkgs;
