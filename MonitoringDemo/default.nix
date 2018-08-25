@@ -12,6 +12,9 @@
       pname = "bcc-demo";
       version = "0.0.1";
       src = lib.cleanSource ./.;
+      buildInputs = [
+        linuxHeaders
+      ];
       propagatedBuildInputs =
         [
           linux.bcc

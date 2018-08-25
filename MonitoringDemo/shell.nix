@@ -22,6 +22,8 @@
 
         LD_LIBRARY_PATH="${lib.makeLibraryPath [ linux.bcc ] }:$LD_LIBRARY_PATH";
 
+        C_INCLUDE_PATH="${lib.makeSearchPathOutput "dev" "include" drv.buildInputs}"
+
         # extra pip packages
         unset SOURCE_DATE_EPOCH
         export PIP_PREFIX="$(pwd)/pip_packages"
