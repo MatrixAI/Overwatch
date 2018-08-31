@@ -1,6 +1,5 @@
-
-# [Linux Socket Filtering aka BPF](https://www.kernel.org/doc/Documentation/networking/filter.txt)
-## Old Style - as socket filter
+# [Linux Socket Filtering with BPF - Part 1](https://www.kernel.org/doc/Documentation/networking/filter.txt)
+## BPF - as pure socket filter
 BPF allows a user-space program to attach a filter onto any socket and allow or disallow certain types of data to come through the socket.
 
 - Linux workflow: create filter code, send to kernel via **SO_ATTACH_FILTER** option, get checked by kernel, begin filtering
@@ -9,10 +8,10 @@ BPF allows a user-space program to attach a filter onto any socket and allow or 
 
 - **SO_LOCK_FILTER** option locks the filter attached to a socket. assures filter stays until socket is closed. useful in situations like:
     - set up socket, attach filter, lock it, drop privileges.
-   
+
 
 ### Structures
-Filters are defined as follows, 
+Filters are defined as follows,
 ```c
 #include <linux/filter.h>
 // each line of filter code is a struct sock_filter
@@ -53,10 +52,10 @@ op:16, jt:8, jf:8, k:32
 - 8 bits jump targets for "jump if true" and "jump if false"
 - 32 bits misc argument
 
-- operations as usual; load, store, branch/jmp, arithmetics, A/X copying and return 
-- addressing modes for register, 
+- operations as usual; load, store, branch/jmp, arithmetics, A/X copying and return
+- addressing modes for register,
 
-**Example** 
+**Example**
 - ARP packets:  
 
 ```
@@ -120,7 +119,7 @@ struct sock_filter code[] = {
 ```
 
 ### Experiment with BPF c code
-Tiny demo with BPF blocking UDP data transfer. [gist](https://gist.github.com/n-zhang-hp/cf04e29ec05c07a9586875d814d45736)
+Tiny demo with BPF blocking UDP data transfer.
 
 #### Observation/Summary
 - BPF accesses link-layer PDU, ethernet frames
@@ -128,11 +127,4 @@ Tiny demo with BPF blocking UDP data transfer. [gist](https://gist.github.com/n-
     - EtherType at `ldh[12]`
     - if IPv4, protocol at `ldb[23]`
 
-## New Style - with bpf() syscall
-### Problem
-- `bpf(...)` is in manpages but not present in `<linux/bpf.h>` or `<linux/bpf_common.h>`
-- linker reports `bpf(...)` undefined
-- /dev/bpf device does not exist
-
-### Workaround
-Based on [bcc](https://github.com/iovisor/bcc/blob/master/src/cc/libbpf.c)'s way of calling bpf, `syscall(__NR_bpf, ...)` should be used instead of direct `bpf(...)` calls
+## eBPF
