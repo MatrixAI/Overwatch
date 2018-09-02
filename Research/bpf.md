@@ -1,5 +1,5 @@
 # [Linux Socket Filtering with BPF - Part 1](https://www.kernel.org/doc/Documentation/networking/filter.txt)
-## BPF - as pure socket filter
+## Classic BPF - as socket filter
 BPF allows a user-space program to attach a filter onto any socket and allow or disallow certain types of data to come through the socket.
 
 - Linux workflow: create filter code, send to kernel via **SO_ATTACH_FILTER** option, get checked by kernel, begin filtering
@@ -127,4 +127,15 @@ Tiny demo with BPF blocking UDP data transfer.
     - EtherType at `ldh[12]`
     - if IPv4, protocol at `ldb[23]`
 
-## eBPF
+## For Overwatch
+### Protocol specification validation
+In the context of protocol specification verifier, classic bpf requires detailed specifications of how a message/packet should be constructed. Classic BPF can validate a message by looking for certain type identifiers/magic numbers.
+
+For example, for a simple HTTP request, the entire network stack of EtherType(Ethernet Frame)/protocol(ip header)/tcp flags(SYN/ACK etc)/request text(http GET POST etc) could be checked by BPF code.
+
+However, given the checking result, classic BPF can only filter the packet out or let the packet through. No data is retained after a packet is checked and no output to user space is allowed.
+
+Our use case requires persistent data storage and communication with user space code for more complex validation. The more powerful eBPF is suitable for our task.
+
+### QoS measurement
+QoS measurements most definitely require communication with user land code. Therefore, classic BPF is not sufficient.

@@ -2,16 +2,21 @@
 ## eBPF
 Extended BPF with more capabilities.  
 
-### Program Types
+Some references:  
+[Unofficial eBPF specs from BCC devs](https://github.com/iovisor/bpf-docs/blob/master/eBPF.md)  
+[Slides for BPF/eBPF talk by Suchakra Sharma](https://speakerdeck.com/tuxology/the-bsd-packet-filter)  
+[Julia Evans's notes on eBPF](https://jvns.ca/blog/2017/06/28/notes-on-bpf---ebpf/)
+
+### eBPF Programs
 `linux/bpf.h` header contains following bpf program types.
 ```c
 enum bpf_prog_type {
 	BPF_PROG_TYPE_UNSPEC,            
-	BPF_PROG_TYPE_SOCKET_FILTER,     # Socket filtering as used in demo
-	BPF_PROG_TYPE_KPROBE,            # krpobe & kretprobes
+	BPF_PROG_TYPE_SOCKET_FILTER,     
+	BPF_PROG_TYPE_KPROBE,            
 	BPF_PROG_TYPE_SCHED_CLS,         
 	BPF_PROG_TYPE_SCHED_ACT,
-	BPF_PROG_TYPE_TRACEPOINT,        # Tracepoint
+	BPF_PROG_TYPE_TRACEPOINT,        
 	BPF_PROG_TYPE_XDP,
 	BPF_PROG_TYPE_PERF_EVENT,
 	BPF_PROG_TYPE_CGROUP_SKB,
@@ -25,14 +30,23 @@ enum bpf_prog_type {
 };
 ```
 
+- More than a simple socket filter;
+- Can tap into kernel fucntions and userland functions with probes;
+- Can hook onto tracepoints;
+- Some other program type such as security is mentioned in [Suchakra Sharma's slides](https://speakerdeck.com/tuxology/the-bsd-packet-filter) as well
+
+### eBPF Events Tracing
+eBPF can collect data from kprobes, uprobes, USDT probes, kernel tracepoints, etc.
+
 ### Data Storage
 eBPF maps available in different data structures, array, hashmap, etc.
 
-### Writing program with eBPF
-### Problem
-- `bpf(...)` is in manpages but not present in `<linux/bpf.h>` or `<linux/bpf_common.h>`
-- linker reports `bpf(...)` undefined
-- /dev/bpf device does not exist
+### Communication
+eBPF map, ftrace, perf buffer
 
-### Workaround
-Based on [bcc](https://github.com/iovisor/bcc/blob/master/src/cc/libbpf.c)'s way of calling bpf, `syscall(__NR_bpf, ...)` should be used instead of direct `bpf(...)` calls
+### Writing program with eBPF
+#### Problem
+The `bpf()` syscall does not exist in the `linux/bpf.h` header. Neither can linker link to it.
+
+**Workaround**:  
+Based on [bcc](https://github.com/iovisor/bcc/blob/master/src/cc/libbpf.c)'s way of calling bpf, `syscall(__NR_bpf, ...)` should be used instead of direct `bpf(...)` calls. Refer to [BPF internals]() document from bcc for more detail.
