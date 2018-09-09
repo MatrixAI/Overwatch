@@ -1,6 +1,6 @@
 {
   pkgs ? import ./pkgs.nix,
-  pythonPath ? "python27",
+  pythonPath ? "python36",
   linuxPath ? "linuxPackages_4_17"
 }:
   with pkgs;
@@ -19,8 +19,6 @@
         [
           linux.bcc
         ] ++ (with python.pkgs; [
-          whisper
           bottle
-          pyroute2
         ]);
     }

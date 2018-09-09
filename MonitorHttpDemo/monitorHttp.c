@@ -122,6 +122,8 @@ int http_filter(struct __sk_buff *skb) {
 		counters.increment(1);
 		logs.update(&ts, &key);
 
+		if (ip->mf) goto KEEP;
+
 		int zero = 0;
 		struct Key lookupKey = {
 			.src_ip = key.dst_ip,

@@ -80,7 +80,7 @@ if len(argv) > 3:
 print ("binding socket to '%s'" % interface)
 
 # initialize BPF - load source code from http-parse-simple.c
-bpf = BPF(src_file = "monitorHttp.c",debug = 0)
+bpf = BPF(src_file="monitorHttp.c", debug=0)
 
 #load eBPF program http_filter of type SOCKET_FILTER into the kernel eBPF vm
 #more info about eBPF program types

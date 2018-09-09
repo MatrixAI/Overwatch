@@ -8,6 +8,8 @@ from bottle import route, run, template
 
 @route('/')
 def index():
-    return '<b>Hello World</b>!'
+    # 100 bytes of lorem ipsum
+    return '''Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+     Mauris ut quam nec dolor sagittis volutpat.'''
 
 run(host='localhost', port=8080)
