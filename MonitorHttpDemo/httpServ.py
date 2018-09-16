@@ -5,6 +5,7 @@
 # Test with multiple interleaving exchanges and long fragmented responses
 
 from bottle import route, run, template
+from sys import argv
 
 @route('/')
 def index():
@@ -12,4 +13,10 @@ def index():
     return '''Lorem ipsum dolor sit amet, consectetur adipiscing elit.
      Mauris ut quam nec dolor sagittis volutpat.'''
 
-run(host='localhost', port=8080)
+host = 'localhost'
+
+if len(argv) == 3:
+  if str(argv[1]) == '-h':
+    host = argv[2]
+
+run(host=host, port=8080)

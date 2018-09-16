@@ -19,14 +19,19 @@ python 2.7
 - kernel update to `4.17.19` may be required to run `bcc 0.7.0`
 
 ### Usage
+#### Basic
 1. `sudo nix-shell`
   - `sudo` is required to run bcc
 2. `python monitorHttp.py [-i <ifname>]`
   - `ifname` interface name to monitor, default to `lo`
   - prints start line of http request/response exchange
   - collected metrics (# of req/resp, latency for each exchange, logs) are shown on termination (via keyboardInterrupt)
-3. `python httpServ.py` to run a http server on `localhost:8080` and `curl localhosst:8080` to generate some http traffic for monitoring
-4. [Optional] Setup linux network namespace to isolate monitor environment for testing
-  - `sudo ip netsh add ns0`, create network namespace
-  - `sudo ip netsh exec ns0 nix-shell`, run `nix-shell` in network namespace
-  - 2 and 3 above
+3. `python httpServ.py [-h <host_ip>]` to run a http server on `<host_ip>:8080`. Default to `localhost`
+4. `url <host_ip>:8080` to generate some http traffic for monitoring
+
+#### Linux Network Namespace
+1. `sudo ip netns add ns0`, create network namespace
+2. `sudo ip netns exec ns0 nix-shell`, run `nix-shell` in network namespace
+3. `python monitorHttp.py [-i <ifname>]` run monitor script
+4. `sudo ip netns exec ns0 nix-shell` and `python httpServ.py [-h <host_ip>]` to run a http server in the network namespace
+5. `sudo ip netns exec ns0 curl <host_ip>:8080` to send http request from within the namespace
