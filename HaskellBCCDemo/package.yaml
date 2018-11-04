@@ -8,20 +8,23 @@ copyright:           "Copyright: (c) 2017 Matrix AI"
 
 extra-source-files:
 - README.md
+- package.yaml
 
 description:         Please see the README on Github at <https://github.com/MatrixAI/Haskell-Demo#readme>
 
 dependencies:
 - base >= 4.7 && < 5
 
-build-tools:
-- clang
-- linuxHeaders
+# build-tools:
+# - clang
+# - linuxPackages_4_18.bcc
 
 library:
   source-dirs: src
   exposed-modules:
     - Lib
+  extra-libraries:
+    bcc
 
 executables:
   haskell-demo-exe:

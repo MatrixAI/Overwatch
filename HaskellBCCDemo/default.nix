@@ -1,6 +1,6 @@
 {
   pkgs ? import ./pkgs.nix,
-  haskellPath ? "ghc822"
+  haskellPath ? "ghc843"
 }:
   with pkgs;
   let
@@ -19,7 +19,7 @@
               ])
           );
           src = lib.cleanSource attrs.src;
-          buildInputs = attrs.buildInputs ++ (with linuxPackages; [ bcc ]);
+          buildInputs = attrs.buildInputs ++ [ linuxPackages_4_18.bcc ];
         };
       })
     )

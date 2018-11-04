@@ -1,6 +1,6 @@
 {
   pkgs ? import ./pkgs.nix,
-  haskellPath ? "ghc822"
+  haskellPath ? "ghc843"
 }:
   with pkgs;
   let
@@ -9,12 +9,10 @@
   in
     drv.overrideAttrs (attrs: {
       src = null;
-      buildInputs = attrs.buildInputs ++ (with haskellPackages; [
+      buildInputs = attrs.buildInputs ++ [ linuxPackages_4_18.bcc ] ++ (with haskellPackages; [
         cabal2nix
         hpack
         cabal-install
-      ]) ++ (with linuxPackages; [
-        bcc
       ]);
 
       shellHook = attrs.shellHook + ''
