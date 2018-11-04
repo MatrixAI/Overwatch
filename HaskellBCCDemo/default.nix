@@ -5,7 +5,7 @@
   with pkgs;
   let
     haskellPackages = lib.getAttrFromPath (lib.splitString "." haskellPath) haskell.packages;
-    drv = haskellPackages.callPackage (import ./cabal.nix) {};
+    drv = haskellPackages.callPackage (import ./cabal.nix ) { bcc = linuxPackages_4_18.bcc; };
   in
     haskell.lib.buildStrictly (
       drv.overrideAttrs (attrs: {
